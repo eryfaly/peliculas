@@ -1,0 +1,115 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background: #e0e0e0;
+	color: #1d1d1d;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 40px auto 100px auto;
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 40px;
+}
+
+.contenedor .pelicula {
+	text-align: center;
+}
+
+.contenedor .pelicula .titulo {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.contenedor .pelicula .poster {
+	width: 100%;
+	margin-bottom: 10px;
+	border-radius: 15px;
+}
+
+.paginacion {
+	position: fixed;
+	bottom: 0;
+	background: orange;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding: 10px;
+}
+
+.paginacion button {
+	cursor: pointer;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 50px;
+	width: 200px;
+	background:black;
+	color: #fff;
+	border-radius: 100px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	transition: .3s ease all;
+}
+
+.paginacion button:hover {
+	background: #137c32;
+}
+
+/* Estilos para la barra de navegación (nav) */
+.menu-idiomas {
+    background-color: #333; /* Cambia el color de fondo según tu preferencia */
+    display: flex;
+    align-items: center;
+	align-items: justify;
+    padding: 20px; 
+}
+
+
+.menu-idiomas button {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 10px; 
+    color: black; 
+    transition: color 0.3s ease; 
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	height: 50px;
+	width: 200px;
+	border-radius: 100px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	transition: .3s ease all;
+	background-color: orange;
+}
+
+
+.menu-idiomas button:hover {
+    color: #007bff; 
+}
+
+.menu-idiomas button + button {
+    margin-left: 10px; /* Espacio entre botones */
+}
+
+.titulo{
+	text-align: center;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 80px;
+}
