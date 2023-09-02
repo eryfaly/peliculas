@@ -66,3 +66,27 @@ let pagina = 1;
         }
 
         cargarPeliculas();
+
+        const selectGeneros = document.querySelector("btngeneros");
+
+        fetch("https://api.themoviedb.org/3/genre/movie/list?language=en", {
+          method: "GET",
+          headers: {
+            accept: "application/json",
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3MmU4N2QyMmVlMDQ0MDBmYjA5ZjJkM2I0ODNlNTY1OCIsInN1YiI6IjY0ZWE4YjFlYzVjMWVmMDBhZDNkZTk4MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.PqtwMzk9s4i4JLPDsq7XJrzHCovhfTVYJW8KSnyWg04"
+          }
+        })
+          .then(response => response.json())
+          .then(generos => {
+           
+            for (const genero of generos) {
+              const option = document.createElement("option");
+              option.text = genero.name;
+              option.value = genero.id;
+              selectGeneros.appendChild(option);
+            }
+
+            
+          });
+
+   
