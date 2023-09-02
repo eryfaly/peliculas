@@ -1,5 +1,5 @@
 let pagina = 1;
-        let idiomaSeleccionado = 'es-MX'; // Idioma predeterminado
+        let idiomaSeleccionado = 'es-MX'; 
 
         const btnAnterior = document.getElementById('btnAnterior');
         const btnSiguiente = document.getElementById('btnSiguiente');
@@ -26,8 +26,7 @@ let pagina = 1;
         });
 
         btnIngles.addEventListener('click', () => {
-            idiomaSeleccionado = 'en-US'; // Cambiar a 'en-US' para inglés
-            cargarPeliculas();
+            idiomaSeleccionado = 'en-US'; 
         });
 
         const cargarPeliculas = async () => {
@@ -36,7 +35,7 @@ let pagina = 1;
 
                 console.log(respuesta);
 
-                // Si la respuesta es correcta
+           
                 if (respuesta.status === 200) {
                     const datos = await respuesta.json();
 
@@ -64,5 +63,7 @@ let pagina = 1;
                 console.log(error);
             }
         }
+
+
 
         cargarPeliculas();
